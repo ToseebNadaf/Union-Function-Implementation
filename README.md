@@ -14,12 +14,12 @@ To use the **union function** in your project, follow these steps:
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/your-username/union-function.git
+   git clone https://github.com/ToseebNadaf/Union-Function-Implementation.git
    ```
 
 2. **Navigate to the project directory**:
    ```bash
-   cd union-function
+   cd Union-Function-Implementation
    ```
 
 3. **Install dependencies** (if any):
