@@ -27,10 +27,18 @@ function deepEqual(obj1, obj2) {
 function union(arr1, arr2) {
   const combined = [...arr1, ...arr2];
   const result = [];
+  const primitives = new Set();
 
   for (const item of combined) {
-    if (!result.some((existingItem) => deepEqual(existingItem, item))) {
-      result.push(item);
+    if (typeof item !== "object" || item === null) {
+      if (!primitives.has(item)) {
+        primitives.add(item);
+        result.push(item);
+      }
+    } else {
+      if (!result.some((existingItem) => deepEqual(existingItem, item))) {
+        result.push(item);
+      }
     }
   }
 
